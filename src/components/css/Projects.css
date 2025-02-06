@@ -115,7 +115,7 @@
 }
 
 .scroll-arrow.left {
-  left: 20px; /* Positioned outside the card container */
+  left: 20px; 
 }
 
 .scroll-arrow.right {

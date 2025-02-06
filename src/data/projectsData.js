@@ -30,30 +30,6 @@ const projectsData = [
       image: img2
     },
     {
-      title: "Gym Management Application",
-      description: "The application is developed to maintain the Gym members' information and manage the billing cycles.",
-      client: "Rk fitness, Khed",
-      features: [
-        "Create/ Manage the Gym members' details.",
-        "Create/ Manage the Gym subscription data.",
-        "Track the Gym members' fee status.",
-        "The application sends the fee pending reminders via WhatsApp messages to Gym members."
-      ],
-      image: img2
-    },
-    {
-      title: "Gym Management Application",
-      description: "The application is developed to maintain the Gym members' information and manage the billing cycles.",
-      client: "Rk fitness, Khed",
-      features: [
-        "Create/ Manage the Gym members' details.",
-        "Create/ Manage the Gym subscription data.",
-        "Track the Gym members' fee status.",
-        "The application sends the fee pending reminders via WhatsApp messages to Gym members."
-      ],
-      image: img2
-    },
-    {
       title: "SUCO - Food Delivery Application",
       description: "SUCO is a food delivery application built for restaurants to grow their business digitally.",
       client: "Various Restaurant Clients",
