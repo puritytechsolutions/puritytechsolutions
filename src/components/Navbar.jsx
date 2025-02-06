@@ -14,7 +14,7 @@ const Navbar = () => (
       {/* <h1 className="logo-text">Purity Tech Solutions</h1> */}
     </div>
     <ul className="nav-links">
-      {['home', 'about','services', 'projects', 'team', 'Contact Us'].map((section) => (
+      {['home', 'about','services', 'projects', 'team', 'contact Us'].map((section) => (
         <li key={section}>
           <Link to={section} smooth={true} duration={500} offset={-70}>
             {section.charAt(0).toUpperCase() + section.slice(1)}

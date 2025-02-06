@@ -62,6 +62,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   padding: 1rem;
+  margin-left: 3rem;
 }
 
 .project-card:hover {
@@ -91,7 +92,7 @@
   position: absolute;
   top: 250%;
   transform: translateY(-50%);
-  background-color: #0f172a;
+  background-color: #bcbcbc;
   color: white;
   border: none;
   font-size: 2rem;
@@ -110,7 +111,7 @@
 
 .scroll-arrow:hover {
   opacity: 1;
-  background-color: #1e293b;
+  background-color: #a7a6a6;;
 }
 
 .scroll-arrow.left {
@@ -194,6 +195,7 @@
     width: 90%;
     height: auto;
     flex: 0 0 90%; 
+    margin-left: 0;
     margin-right: 10px;
     text-wrap: wrap;
   }
