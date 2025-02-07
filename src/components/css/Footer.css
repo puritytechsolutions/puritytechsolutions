@@ -1,94 +1,148 @@
 /* Footer Styles */
 .footer {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 2rem 1rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  
-  .footer-links,
-  .footer-contact {
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  .footer-links h4,
-  .footer-contact h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #f8b400;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #f8b400;
-  }
-  
-  .footer-contact p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-  }
-  
-  .footer-contact a {
-    color: #f8b400;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-contact a:hover {
-    color: #ffffff;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
-    border-top: 1px solid #333;
-    padding-top: 1rem;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .footer-links,
-    .footer-contact {
-      min-width: unset;
-    }
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-    .footer-bottom p {
-      font-size: 0.7rem;
-    }
+/* Footer Background Animation */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(50px);
+  animation: floating 6s infinite alternate ease-in-out;
+}
+
+/* Container for Footer Sections */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Footer Section Styling */
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #f8b400;
+}
+
+/* Quick Links Styling */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  color: #f8b400;
+}
+
+/* Contact Info */
+.footer-contact p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer-contact a {
+  color: #f8b400;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #f8b400;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #ff5733;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #bbb;
+}
+
+/* Floating Background Animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0) translateX(0);
   }
-  
+  100% {
+    transform: translateY(20px) translateX(20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    min-width: unset;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+}

@@ -1,104 +1,130 @@
+/* General Styling */
 .projects {
-  padding: 2rem 1rem;
-  background-color: #f4f4f4;
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   text-align: center;
+  color: #fff;
 }
 
 .projects h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #0f172a;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffcc00;
 }
 
-.description {
-  height: 60px;
-  text-align: justify;
-}
-
-
+/* Projects Container */
 .projects-container {
-  position: relative;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  justify-content: space-evenly;
-}
-
-.project-grid {
-  display: flex;
-  gap: 1.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 1rem 2rem; 
-  scrollbar-width: none; 
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px 0;
 }
 
-.project-grid::-webkit-scrollbar {
-  display: none; 
+.projects-container::-webkit-scrollbar {
+  display: none;
 }
 
-.show-more-container{
-  text-align: end;
-  font-size: 14px;
-  font-style: italic;
-  color: #aaa;
-}
-
-.show-more{
-  cursor: pointer;
-}
-
-.feature-item{
-  margin-top: 0.2rem;
-  margin-left: 1rem;
-  font-size: 14px;
-}
-
+/* Project Card */
 .project-card {
   flex: 0 0 auto;
-  width: 400px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   text-align: left;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-left: 3rem;
+  position: relative;
+  overflow: hidden;
+  transform: perspective(500px) rotateY(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: perspective(500px) rotateY(50deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Image Styling */
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  border-radius: 12px;
 }
 
+/* Title & Description */
 .project-card h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
   color: #333;
 }
 
 .project-card p {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 1rem;
+  color: #555;
   margin: 0.5rem 0;
+  line-height: 1.4;
 }
 
-.scroll-arrow {
+.description {
+  height: auto;
+  text-align: justify;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.feature-item {
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+
+.feature-item::before {
+  content: "✔";
+  color: #ffcc00;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Show More Button */
+.show-more-container {
+  text-align: end;
+  font-size: 14px;
+  font-style: italic;
+  color: #007bff;
+}
+
+.show-more {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.show-more:hover {
+  color: #ffcc00;
+}
+
+/* Scroll Arrows */
+/* .scroll-arrow {
   position: absolute;
-  top: 250%;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: #bcbcbc;
-  color: white;
+  background: #ffcc00;
+  color: #000;
   border: none;
   font-size: 2rem;
   padding: 0.5rem;
   cursor: pointer;
-  z-index: 10;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -106,149 +132,57 @@
   align-items: center;
   justify-content: center;
   opacity: 0.8;
-  transition: background-color 0.3s, opacity 0.3s;
+  transition: all 0.3s;
 }
 
 .scroll-arrow:hover {
   opacity: 1;
-  background-color: #a7a6a6;;
+  background: #ffa500;
 }
 
 .scroll-arrow.left {
-  left: 20px; 
+  left: 10px;
 }
 
 .scroll-arrow.right {
-  right: 20px; 
-}
+  right: 10px;
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
     justify-content: flex-start;
-    white-space: nowrap;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    white-space: wrap;
+    scrollbar-width: none;
   }
 
   .projects-container::-webkit-scrollbar {
-    display: none; 
-  }
-
-  .project-grid {
-    overflow-x: hidden; 
+    display: none;
   }
 
   .project-card {
-    width: 250px;
+    width: 90%;
+    flex: 0 0 90%;
+    margin-left: 0;
   }
 
-  .project-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-card p {
-    font-size: 0.8rem;
-  }
-
-  .scroll-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-
-  .scroll-arrow.left, .scroll-arrow.right{
-    display: none;
-  }
   .project-card img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+    height: 160px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    justify-content: flex-start;
-    white-space: nowrap;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-  }
-
-  .projects-container::-webkit-scrollbar {
-    display: none; 
-  }
-
-  .project-grid {
-    overflow-x: hidden; 
-  }
-
-
   .project-card {
-    width: 90%;
-    height: auto;
-    flex: 0 0 90%; 
-    margin-left: 0;
-    margin-right: 10px;
-    text-wrap: wrap;
-  }
-
-  .scroll-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .scroll-arrow.left, .scroll-arrow.right{
-    display: none;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 0 auto;
   }
 
   .project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+    height: 150px;
   }
-}
 
-.footer-links,
-.footer-contact {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-links1 h4,
-.footer-contact h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #f8b400;
-}
-
-.footer-links1 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links1 li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links1 a {  
-  color: #f8b400;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links1 a:hover {
-  color: #2100f8;
+  /* .scroll-arrow {
+    display: none;
+  } */
 }
