@@ -12,7 +12,7 @@ const Team = () => {
     },
     {
       name: "Harshal Umasare",
-      position: "Team Lead",
+      position: "Software Engineer",
       image:
         "https://media.licdn.com/dms/image/v2/D4D03AQExOfzKyPtdfA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711436528138?e=1740614400&v=beta&t=WE-9ttvdlZVvVgBjzrlrSWj2J7cW4tVmYP_rHxlsefE",
       linkedIn: "https://www.linkedin.com/in/harshal-umasare-a247aa207/",

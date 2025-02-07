@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <h2>Our Projects</h2>
+      <h2 data-text="Our Projects">Our Projects</h2>
       <div className="projects-container" ref={scrollRef}>
         {projectsData.map((project, index) => (
           <div 

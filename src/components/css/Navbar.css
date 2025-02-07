@@ -107,6 +107,7 @@ body {
 @media (max-width: 768px) {
   .navbar {
     padding: 0.8rem 1rem;
+    height: 60px;
   }
 
   .nav-links {
@@ -135,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    gap: 4px;
+    gap: 1px;
   }
   
   .hamburger {
@@ -144,7 +145,11 @@ body {
     cursor: pointer;
     margin-right: 20px; /* Add margin from the right */
   }
-  
+
+  .logo-image {
+    height: 40px;
+    width: 40px;
+  }
   
   /* Hamburger Animation */
   .hamburger.active div:nth-child(1) {
